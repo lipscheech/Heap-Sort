@@ -8,8 +8,8 @@ void Swap(int* a, int* b){ //funcao para fazer a troca dos elementos em determin
 
 void Heapfy(int* vet, int i, int n){
     int aux = i;
-    int l = i * 2 + 1;
-    int r = i * 2 + 2;
+    int l = 2 * i + 1;
+    int r = 2 * i + 2;
 
     if((l < n) && (vet[l] > vet[aux])){
         aux = l;
@@ -40,3 +40,5 @@ void printVetor(int* vet, int n){ //funcao para imprimir o vetor
     }
     printf("\n");
 }
+
+
