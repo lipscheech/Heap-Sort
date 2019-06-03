@@ -1,4 +1,4 @@
-#include "Heap.h"
+#include "Heap.c"
 
 int main(){
 
@@ -7,11 +7,10 @@ int main(){
     printf("Digite quantos elementos irao ser inseridos na estrutura para ordenar: \n");
     scanf("%d", &tam);
     printf("Digite seus valores: \n");
-    vet = (int *) malloc(tam*sizeof(int));
+    vet = (int *) malloc(tam*sizeof(int)); //vetor dinamico
     for(int i = 0; i < tam; i++){
         scanf("%d", &vet[i]);
     }
-    printf("Aplicando o heap sort\n");
     heap(vet, tam);
     printf("\nestrutura ordenada\n");
     printVetor(vet, tam);

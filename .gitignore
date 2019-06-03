@@ -52,3 +52,9 @@ Mkfile.old
 dkms.conf
 *.depend
 *.layout
+HeapSort/.vscode/ipch/d21a7b73be2574/mmap_address.bin
+HeapSort/.vscode/ipch/9e4b047abe2aa73a/main.ipch
+HeapSort/.vscode/ipch/9e4b047abe2aa73a/mmap_address.bin
+HeapSort/.vscode/ipch/d2157b73be1cf5/Heap.ipch
+HeapSort/.vscode/ipch/d2157b73be1cf5/mmap_address.bin
+HeapSort/heap
