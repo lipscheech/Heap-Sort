@@ -1,6 +1,6 @@
 #include "Heap.h"
 
-void Swap(int* a, int* b){ //funcao para fazer a troca dos elementos em determinadas posicoes
+void Swap(int* a, int* b){ 
     int aux = *a;
     *a = *b;
     *b = aux;
@@ -8,8 +8,8 @@ void Swap(int* a, int* b){ //funcao para fazer a troca dos elementos em determin
 
 void Heapfy(int* vet, int i, int n){
     int aux = i;
-    int l = 2 * i + 1;
-    int r = 2 * i + 2;
+    int l = 2 * i;
+    int r = 2 * i + 1;
 
     if((l < n) && (vet[l] > vet[aux])){
         aux = l;
@@ -23,18 +23,18 @@ void Heapfy(int* vet, int i, int n){
     }
 }
 
-void heap(int* vet, int n){ //recebe o vetor e seu tamanho
+void heap(int* vet, int n){
     int i, aux;
-    for(i = n  / 2 - 1; i >= 0; i--){ //o loop percorre a metade do vetor ate a primeira posicao
-        Heapfy(vet, i, n); //e chamaa funcao para criar a heap
+    for(i = n  / 2 - 1; i >= 0; i--){
+        Heapfy(vet, i, n);
     }
     for(i = n -1; i >= 0; i--){
         Swap(&vet[0], &vet[i]);
-        Heapfy(vet, 0, i - 1); //cria de novo a heap
+        Heapfy(vet, 0, i - 1);
     }
 }
 
-void printVetor(int* vet, int n){ //funcao para imprimir o vetor
+void printVetor(int* vet, int n){
     for(int i = 0; i < n; i++){
         printf("%d ", vet[i]);
     }
